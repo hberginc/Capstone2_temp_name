@@ -12,3 +12,9 @@ Image classification(Food, map...)
 
 
 
+## Hard Hat detection
+Utilize the following 5000 images
+https://makeml.app/datasets/hard-hat-workers
+
+image detection to train a model to find hard hats
+Encorporate bike helmet data to find differences between hard hat and bike helmet

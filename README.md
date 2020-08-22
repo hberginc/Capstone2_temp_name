@@ -15,7 +15,10 @@ Image classification(Food, map...)
 
 MVP ++ predict rating based on written review
 
-
+## ID bias in text
+I have been looking through this data found via 'The Big Bad NLP Database' and have really found interest in identifying bias text with the hopes of eventually creating "unbiased" suggestions.
+Data is organized in various formats here: https://github.com/rpryzant/neutralizing-bias
+It looks like there is 180,000 instances available contianing biased and neutralzied versions of text from wikipedia. I am also interested in utilizing more wikipedia entries to create unbaiased versions if possible. 
 
 ## Hard Hat detection
 Utilize the following 5000 images

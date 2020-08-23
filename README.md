@@ -1,5 +1,21 @@
 # Capstone2_temp_name
 
+## ID bias in text
+
+This data includes around 874 MB of text "comment" data stored in json format
+
+Data is found here:https://figshare.com/articles/data_json/7376747
+Collection of user-generated online news comments published from 2015-2017 as part of a now-defunct commenting platform. For use in furthering research into online toxicity, bias, and harassment.
+
+
+
+MVP: I would like to focus on the concept of identifing bias text focusing first in this commenting platform with the hopes of encorporating news headline data
+
+MVP+ Once identifying bias words or phrases, I would like to create a "recommender" to make a suggestion of how to "unbias" the text
+
+MVP++ It would be great to also identify the possibility of repeating the process with "harassment or violent" comments as well 
+
+
 ## Yelp Dataset Proposal:
 https://www.yelp.com/dataset/documentation/main
 
@@ -15,10 +31,6 @@ Image classification(Food, map...)
 
 MVP ++ predict rating based on written review
 
-## ID bias in text
-I have been looking through this data found via 'The Big Bad NLP Database' and have really found interest in identifying bias text with the hopes of eventually creating "unbiased" suggestions.
-Data is organized in various formats here: https://github.com/rpryzant/neutralizing-bias
-It looks like there is 180,000 instances available contianing biased and neutralzied versions of text from wikipedia. I am also interested in utilizing more wikipedia entries to create unbaiased versions if possible. 
 
 ## Hard Hat detection
 Utilize the following 5000 images

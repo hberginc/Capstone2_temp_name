@@ -44,12 +44,14 @@ import random
 
 
 
-
-def plot_word_cloud(text, title, save_fig = False, f_name = None):
+def plot_word_cloud(text, title, save_fig = False, f_name = None, ax = None):
     wordcloud = WordCloud().generate(text)
-    plt.imshow(wordcloud, interpolation='bilinear')
-    plt.title(title)
-    plt.axis("off")
+    ax.imshow(wordcloud, interpolation='bilinear')
+    if ax:
+        ax.set_title(title)
+        ax.axis("off")
+    else:
+        plt.set_title(title)
     if save_fig:
         plt.savefig(f_name)
         
@@ -112,5 +114,14 @@ def gridsearch_with_output(estimator, parameter_grid, X_train, y_train):
 
 
 
+def orig_vect(X_train):
+    '''
+    pass in x training data to fit and transform to
 
+    Returns:
+     vectorizer, x_train vectorized
+    '''
+    vectorizer = TfidfVectorizer(max_features=1000, stop_words='english', analyzer='word',sublinear_tf = True)
+    x_train_vect = vectorizer.fit_transform(X_train)
+    return vectorizer, x_train_vect
 

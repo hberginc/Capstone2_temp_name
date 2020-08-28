@@ -99,7 +99,8 @@ def gridsearch_with_output(estimator, parameter_grid, X_train, y_train):
                                     parameter_grid,
                                     n_jobs=-1,
                                     verbose=True,
-                                    scoring='accuracy')
+                                    scoring='precision')
+
     model_gridsearch.fit(X_train, y_train)
     best_params = model_gridsearch.best_params_ 
     model_best = model_gridsearch.best_estimator_
@@ -121,7 +122,24 @@ def orig_vect(X_train):
     Returns:
      vectorizer, x_train vectorized
     '''
-    vectorizer = TfidfVectorizer(max_features=1000, stop_words='english', analyzer='word',sublinear_tf = True)
+    vectorizer = TfidfVectorizer(max_features=1000, \
+        stop_words='english', analyzer='word',sublinear_tf = True, ngram_range=(1,2))
     x_train_vect = vectorizer.fit_transform(X_train)
     return vectorizer, x_train_vect
+
+
+
+def new_vect(X_train):
+    vectorizer = TfidfVectorizer(analyzer='word', binary=False, decode_error='strict',
+                encoding='utf-8',
+                input='content', lowercase=True, max_df=0.25, max_features=1000,
+                min_df=1, ngram_range=(1, 1), norm='l2', preprocessor=None,
+                smooth_idf=True, stop_words='english', strip_accents=None,
+                sublinear_tf=False, token_pattern='(?u)\\b\\w\\w+\\b',
+                tokenizer=None, use_idf=True, vocabulary=None)
+
+    x_train_vect = vectorizer.fit_transform(X_train)
+    return vectorizer, x_train_vect
+
+
 

@@ -41,17 +41,13 @@ The Final models I trained were:
 
 Random Forest, Gradient Boosting, Binomial Naive Bays and Complement Naive Bayes. Getting a visual of the Matrices below we see that each model does fairly well at identifying Approved Comments and identifying Rejected Comments is a difficult task. X model does the best.
 
-![picture](images/cnb_con_mx.png)
-![picture](images/rf_con_mx_oversamp.png)
-
-![picture](images/nb_con_mx.png)
-![picture](images/gb_con_mx_over_samp.png)
+![picture](images/six_matrices.png)
 
 
 
+Visualzing the Confusion matrices in comparison with ROC curve seen below, we note that a higher ROC curve evaluates to a higher recall, 
 
-
-![picture](images/ROC_multi.png)
+![picture](images/six_ROC.png)
 
 
 
@@ -96,3 +92,10 @@ Overall, my final model's true predictions do show a blatant difference between 
 
 ## Future Directions:
 
+Optimize Text Vectorization:
+
+The combinations of parameters with TFIDF and model parameters are endless. Exploring the combination could proof fruitful.
+
+Gather More “Rejected” Data:
+
+The importance of Machine Learning context of natural language should be possible with enough data and the right parameters 
